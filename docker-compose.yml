@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  rabbit:
+    image: rabbitmq:3-management-alpine
+    container_name: "rabbit-con"
+    hostname: "rabbit"
+    restart: on-failure
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - $HOME/rabbitmq/data/:/var/lib/rabbitmq/
+      - $HOME/rabbitmq/log/:/var/log/rabbitmq
+    networks:
+      - sipia_rv1_4
+
+networks:
+  sipia_rv1_4:
+    name: sipia_rv1_4
+    driver: bridge
