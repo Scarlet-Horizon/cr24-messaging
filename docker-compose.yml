@@ -14,6 +14,10 @@ services:
       - $HOME/rabbitmq/log/:/var/log/rabbitmq
     networks:
       - sipia_rv1_4
+    deploy:
+      resources:
+        limits:
+          memory: 200M
 
 networks:
   sipia_rv1_4:
