@@ -5,7 +5,7 @@ docker container stop rabbit-con
 docker-compose up -d
 
 cd ../account-service/ || exit 2
-docker container stop acccunt-api-con
+docker container stop account-api-con
 docker-compose up -d
 
 cd ../account-stat/ || exit 3
