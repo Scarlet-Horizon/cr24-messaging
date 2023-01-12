@@ -3,6 +3,8 @@
 cd messaging/ || exit 1
 docker-compose up -d
 
+sleep 3
+
 cd ../account-stat/ || exit 2
 docker-compose up -d
 
